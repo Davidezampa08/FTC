@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('pic/back.jpg'); /* Sostituisci 'sfondo.jpg' con il percorso dell'immagine di sfondo desiderata */
+    background-image: url('pic/back.jpg'); 
     background-size: cover;
     background-position: center;
     color: #333;
