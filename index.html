@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPASOFST - First Tech Competition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#presentazione">Chi Siamo</a>
+        <a href="#progetto">Il Nostro Progetto</a>
+        <a href="#galleria">Galleria Foto</a>
+    </nav>
+
+    <header>
+        <h1>COPASOFST - First Tech Competition <img src="pic/logocp.png" alt=""></h1>
+        
+    </header>
+
+    <section id="presentazione">
+        <h2>Chi Siamo</h2>
+        <p>Benvenuti nel sito della squadra COPASOFST! Siamo una squadra appassionata che partecipa alla First Tech Competition...</p>
+    </section>
+
+    <section id="progetto">
+        <h2>Il Nostro Progetto</h2>
+        <p>Qui ci sara' una descrizione</p>
+    </section>
+
+    <section id="galleria">
+        <h2>Galleria Foto</h2>
+        <div class="gallery">
+            <img src="pic/immagine1.jpg" alt="Descrizione pic/immagine 1" onclick="showFullscreen(this)">
+            <img src="pic/immagine2.jpg" alt="Descrizione pic/immagine 2" onclick="showFullscreen(this)">
+            <img src="pic/immagine3.jpg" alt="Descrizione pic/immagine 3" onclick="showFullscreen(this)">
+            <img src="pic/immagine4.jpg" alt="Descrizione pic/immagine 4" onclick="showFullscreen(this)">
+            <img src="pic/immagine5.jpg" alt="Descrizione pic/immagine 5" onclick="showFullscreen(this)">
+            <img src="pic/immagine6.jpg" alt="Descrizione pic/immagine 6" onclick="showFullscreen(this)">
+            <img src="pic/immagine7.jpg" alt="Descrizione pic/immagine 7" onclick="showFullscreen(this)">
+            <img src="pic/immagine8.jpg" alt="Descrizione pic/immagine 8" onclick="showFullscreen(this)">
+        </div>
+    </section>
+
+    <div class="fullscreen-overlay" onclick="hideFullscreen()">
+        <img src="" alt="Fullscreen Image" class="fullscreen-image">
+    </div>
+    <section id="contattaci">
+        <h2>Contattaci</h2>
+        <form id="contactForm" onsubmit="submitForm(event)">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Messaggio:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Invia Messaggio">
+        </form>
+    </section>
+    <section></section>
+
+    <footer>
+        <p>&copy; 2024 COPASOFST - First Tech Competition 
+            <br>https://www.copernicopasoli.edu.it/wp/</p>
+    </footer>
+
+    <script>
+        function showFullscreen(imgElement) {
+            const fullscreenOverlay = document.querySelector('.fullscreen-overlay');
+            const fullscreenImage = document.querySelector('.fullscreen-image');
+
+            fullscreenImage.src = imgElement.src;
+            fullscreenImage.alt = imgElement.alt;
+
+            fullscreenOverlay.style.display = 'flex';
+        }
+
+        function hideFullscreen() {
+            const fullscreenOverlay = document.querySelector('.fullscreen-overlay');
+            fullscreenOverlay.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
